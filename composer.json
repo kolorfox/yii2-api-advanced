@@ -3,7 +3,7 @@
 	"description" : "Yii 2 API for Kolorfox - Only backend & api",
 	"type" : "project",
 	"license" : "BSD-3-Clause",
-	"minimum-stability" : "stable",
+    "minimum-stability": "dev",
 	"require" : {
 		"php" : ">=5.6.0",
 		"ext-json" : "*",
