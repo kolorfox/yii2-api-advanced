@@ -12,6 +12,9 @@ namespace common\components;
 
 use yii\db\ActiveRecord;
 
+/**
+ * @property $apiAttributes
+ */
 class Model extends ActiveRecord {
 
 	const STATUS_ENABLE  = 1;
@@ -39,5 +42,39 @@ class Model extends ActiveRecord {
 			];
 		}
 		return $data[$index];
+	}
+
+	/**
+	 * @param $attrs
+	 *
+	 * @return array
+	 */
+	public function getApiAttributes($attrs = null) {
+		$attributes = $this->attributes;
+		if ($this->hasAttribute('created_at')) {
+			unset($attributes['created_at']);
+		}
+		if ($this->hasAttribute('updated_at')) {
+			unset($attributes['updated_at']);
+		}
+		if ($this->hasAttribute('link')) {
+			unset($attributes['link']);
+		}
+		if (!is_array($attrs)) {
+			$attrs = [$attrs];
+		}
+		if ($attrs != null) {
+			foreach ($attrs as $attr) {
+				if ($this->hasAttribute($attr)) {
+					unset($attributes[$attr]);
+				}
+			}
+		}
+		foreach ($attributes as $attribute => $value) {
+			if ($value === null) {
+				$attributes[$attribute] = "";
+			}
+		}
+		return $attributes;
 	}
 }

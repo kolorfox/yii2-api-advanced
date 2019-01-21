@@ -40,23 +40,4 @@ class ArrayHelper extends \yii\helpers\ArrayHelper {
 		}
 		return $response;
 	}
-
-	/**
-	 * @param $array
-	 *
-	 * @return array
-	 */
-	public static function whoCanDepositArrayKeys($array) {
-		$response = [];
-		foreach ($array as $key => $item) {
-			if (is_array($item)) {
-				foreach ($item as $subKey => $value) {
-					$response[] = $subKey;
-				}
-			} else {
-				$response[] = $key;
-			}
-		}
-		return array_unique($response);
-	}
 }

@@ -1,12 +1,18 @@
 <p align="center">
     <a href="https://github.com/navatech" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
+        <img src="https://avatars2.githubusercontent.com/u/46888216" height="100px">
     </a>
     <h1 align="center">Yii 2 Kolorfox basic</h1>
     <br>
 </p>
 
-This project include only `backend`, `console` & `api` module.
+This project contains `frontend`, `backend`, `console` & `api` module.
+
+INSTALL
+-------
+```
+composer create-project kolorfox/yii2-api-advanced project-folder
+```
 
 DIRECTORY STRUCTURE
 -------------------

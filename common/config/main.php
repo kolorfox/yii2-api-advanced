@@ -17,7 +17,7 @@ return [
 			'class' => 'navatech\setting\Setting',
 		],
 		'emailManager' => [
-			'class'            => '\navatech\email\components\EmailManager',
+			'class'            => '\common\components\EmailManager',
 			'defaultTransport' => 'yiiMailer',
 			'transports'       => [
 				'yiiMailer' => [

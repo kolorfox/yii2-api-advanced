@@ -1,5 +1,5 @@
 {
-	"name" : "navatech/yii2-kolorfox-basic",
+	"name" : "kolorfox/yii2-api-advanced",
 	"description" : "Yii 2 API for Kolorfox - Only backend & api",
 	"type" : "project",
 	"license" : "BSD-3-Clause",
@@ -11,15 +11,18 @@
 		"yiisoft/yii2" : "~2.0.6",
 		"yiisoft/yii2-bootstrap" : "~2.0.0",
 		"yiisoft/yii2-swiftmailer" : "~2.0.0 || ~2.1.0",
+		"insolita/yii2-migration-generator" : "@dev",
 		"navatech/yii2-simplehtmldom" : "@dev",
 		"navatech/yii2-email-manager" : "@dev",
-		"navatech/yii2-migration-generator" : "@dev",
 		"navatech/yii2-setting" : "@dev",
+		"navatech/yii2-backup" : "@dev",
 		"dektrium/yii2-user" : "@dev",
 		"dmstr/yii2-adminlte-asset" : "^2.1",
 		"almasaeed2010/adminlte" : "~2.4",
 		"warrence/yii2-kartikgii" : "@dev",
-		"kartik-v/yii2-date-range" : "@dev"
+		"kartik-v/yii2-date-range" : "@dev",
+		"spanjeta/yii2-backup" : "@dev",
+		"beaten-sect0r/yii2-db-manager" : "@dev"
 	},
 	"require-dev" : {
 		"yiisoft/yii2-debug" : "~2.0.0",

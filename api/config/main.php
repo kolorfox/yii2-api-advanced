@@ -13,7 +13,7 @@ return [
 			'baseUrl'   => $baseUrl,
 		],
 		'user'         => [
-			'identityClass'   => 'common\models\User',
+			'identityClass'   => 'api\models\User',
 			'enableAutoLogin' => true,
 			'identityCookie'  => [
 				'name'     => '_identity-api',
@@ -43,6 +43,12 @@ return [
 			'enablePrettyUrl' => true,
 			'showScriptName'  => false,
 			'rules'           => [],
+		],
+	],
+	'modules'             => [
+		'v1' => [
+			'basePath' => '@api/modules/v1',
+			'class'    => 'api\modules\v1\Module',
 		],
 	],
 	'params'              => $params,

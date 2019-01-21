@@ -13,7 +13,6 @@ use Yii;
 class Mailer extends \navatech\email\swiftmailer\Mailer {
 
 	/**
-	 * {@inheritDoc}
 	 * @throws \yii\base\InvalidConfigException
 	 */
 	public function init() {

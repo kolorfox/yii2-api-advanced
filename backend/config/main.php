@@ -1,4 +1,8 @@
 <?php
+
+use common\transports\FTP;
+use common\transports\Mail;
+
 $params = array_merge(require __DIR__ . '/../../common/config/params.php', require __DIR__ . '/../../common/config/params-local.php', require __DIR__ . '/params.php', require __DIR__ . '/params-local.php');
 return [
 	'id'                  => 'app-backend',
@@ -96,6 +100,26 @@ return [
 			'controllerMap' => [
 				'template' => '\backend\controllers\mailer\TemplateController',
 				'message'  => '\backend\controllers\mailer\MessageController',
+			],
+		],
+		'backup'   => [
+			'class'     => 'navatech\backup\Module',
+			'backup'    => [
+				'folder' => [
+					'enable' => false,
+					'data'   => [
+						'@api/web/uploads',
+						'@backend/web/uploads',
+					],
+				],
+			],
+			'transport' => [
+				'mail' => [
+					'class' => Mail::class,
+				],
+				'ftp'  => [
+					'class' => FTP::class,
+				],
 			],
 		],
 	],

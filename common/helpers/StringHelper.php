@@ -43,29 +43,4 @@ class StringHelper extends \yii\helpers\StringHelper {
 		}
 		return $randomString;
 	}
-
-	/**
-	 * @param $string
-	 *
-	 * @return bool
-	 */
-	public static function isValidMac($string) {
-		preg_match('/\b[[:xdigit:]]{2}:[[:xdigit:]]{2}:[[:xdigit:]]{2}:[[:xdigit:]]{2}:[[:xdigit:]]{2}:[[:xdigit:]]{2}\b/su', $string, $output_array);
-		return isset($output_array[0]) && $output_array[0] != '';
-	}
-
-	/**
-	 * @param string $type
-	 * @param null   $params
-	 *
-	 * @return mixed|null|string
-	 * @throws \yii\base\InvalidConfigException
-	 */
-	public static function paymentDescription($type, $params = null) {
-		$text = Yii::$app->setting->get('general_payment_' . $type . '_desc');
-		foreach ($params as $key => $param) {
-			$text = str_replace('{{' . $key . '}}', $param, $text);
-		}
-		return $text;
-	}
 }

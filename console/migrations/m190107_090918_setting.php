@@ -2,6 +2,7 @@
 
 use yii\db\Migration;
 use yii\db\Schema;
+use yii\helpers\Json;
 
 class m190107_090918_setting extends Migration {
 
@@ -101,7 +102,11 @@ class m190107_090918_setting extends Migration {
 			'name'        => 'SMTP Encryption',
 			'desc'        => '',
 			'type'        => 'select',
-			'store_range' => '{\"none\":\"None\",\"ssl\":\"SSL\",\"tls\":\"TLS\"}',
+			'store_range' => Json::encode([
+				'none' => "None",
+				"ssl"  => "SSL",
+				"tls"  => "TLS",
+			]),
 			'store_dir'   => '',
 			'value'       => 'tls',
 			'sort_order'  => '5',
