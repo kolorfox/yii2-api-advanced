@@ -3,7 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-class m190107_090917_profile extends Migration {
+class m190122_105713_profile extends Migration {
 
 	public function safeUp() {
 		$tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
@@ -19,7 +19,7 @@ class m190107_090917_profile extends Migration {
 			'timezone'       => Schema::TYPE_STRING . '(40)',
 		], $tableOptions);
 		$this->insert('{{%profile}}', [
-			'user_id'        => '2',
+			'user_id'        => '1',
 			'name'           => '',
 			'public_email'   => '',
 			'gravatar_email' => '',

@@ -3,7 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-class m190107_090914_email_message extends Migration {
+class m190122_105711_email_message extends Migration {
 
 	public function safeUp() {
 		$tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
@@ -19,7 +19,7 @@ class m190107_090914_email_message extends Migration {
 			'sent_at'    => Schema::TYPE_INTEGER . '(11)',
 			'bcc'        => Schema::TYPE_TEXT . '',
 			'files'      => Schema::TYPE_TEXT . '',
-			'try_time'   => Schema::TYPE_INTEGER . ' DEFAULT 0',
+			'try_time'   => Schema::TYPE_INTEGER . '(11) DEFAULT "0"',
 		], $tableOptions);
 	}
 

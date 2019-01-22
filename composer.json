@@ -12,6 +12,7 @@
 		"yiisoft/yii2-bootstrap" : "~2.0.0",
 		"yiisoft/yii2-swiftmailer" : "~2.0.0 || ~2.1.0",
 		"insolita/yii2-migration-generator" : "@dev",
+		"navatech/yii2-migration-generator" : "@dev",
 		"navatech/yii2-simplehtmldom" : "@dev",
 		"navatech/yii2-email-manager" : "@dev",
 		"navatech/yii2-setting" : "@dev",

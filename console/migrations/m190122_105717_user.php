@@ -3,7 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-class m190107_090922_user extends Migration {
+class m190122_105717_user extends Migration {
 
 	public function safeUp() {
 		$tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
@@ -25,19 +25,19 @@ class m190107_090922_user extends Migration {
 		$this->createIndex('user_unique_username', '{{%user}}', 'username', 1);
 		$this->createIndex('user_unique_email', '{{%user}}', 'email', 1);
 		$this->insert('{{%user}}', [
-			'id'                => '2',
+			'id'                => '1',
 			'username'          => 'admin',
 			'email'             => 'admin@gmail.com',
-			'password_hash'     => '$2y$10$8DBurm8XHBsYZF.I16fO7Opj1emFlKV4bbTuCiMevrRgYTusyzfoW',
-			'auth_key'          => 'h8T0DF9yqGKqEooDaoCkAaBL_WVjhm36',
-			'confirmed_at'      => '1546850311',
+			'password_hash'     => '$2y$10$TwhFrxRcMHIO9o87v4HupO9LLW./DlAD1IUDbweN.h2v3tI2wecki',
+			'auth_key'          => 'fM7LPEA9dQ4y5R2762xi5pYEJxqbFuoQ',
+			'confirmed_at'      => '1548154080',
 			'unconfirmed_email' => '',
 			'blocked_at'        => '',
 			'registration_ip'   => '127.0.0.1',
-			'created_at'        => '1546850311',
-			'updated_at'        => '1546850311',
+			'created_at'        => '1548154080',
+			'updated_at'        => '1548154080',
 			'flags'             => '0',
-			'last_login_at'     => '1546850562',
+			'last_login_at'     => '',
 		]);
 	}
 

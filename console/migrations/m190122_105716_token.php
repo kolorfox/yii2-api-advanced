@@ -3,7 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-class m190107_090921_token extends Migration {
+class m190122_105716_token extends Migration {
 
 	public function safeUp() {
 		$tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
