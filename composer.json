@@ -21,8 +21,7 @@
 		"almasaeed2010/adminlte" : "~2.4",
 		"warrence/yii2-kartikgii" : "@dev",
 		"kartik-v/yii2-date-range" : "@dev",
-		"spanjeta/yii2-backup" : "@dev",
-		"beaten-sect0r/yii2-db-manager" : "@dev"
+		"ext-mysqli" : "*"
 	},
 	"require-dev" : {
 		"yiisoft/yii2-debug" : "~2.0.0",

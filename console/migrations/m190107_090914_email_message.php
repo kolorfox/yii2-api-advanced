@@ -19,6 +19,7 @@ class m190107_090914_email_message extends Migration {
 			'sent_at'    => Schema::TYPE_INTEGER . '(11)',
 			'bcc'        => Schema::TYPE_TEXT . '',
 			'files'      => Schema::TYPE_TEXT . '',
+			'try_time'   => Schema::TYPE_INTEGER . ' DEFAULT 0',
 		], $tableOptions);
 	}
 

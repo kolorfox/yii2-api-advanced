@@ -7,13 +7,13 @@ use yii\helpers\Html;
  * @var yii\web\View                $this
  * @var yii\data\ActiveDataProvider $dataProvider
  */
-$this->title                   = 'Mẫu email';
+$this->title                   = 'Email template';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="email-template-index">
 
 	<p>
-		<?= Html::a('<i class="glyphicon glyphicon-plus"></i> Thêm mới', ['create'], ['class' => 'btn btn-success']) ?>
+		<?= Html::a('<i class="glyphicon glyphicon-plus"></i> Create new', ['create'], ['class' => 'btn btn-success']) ?>
 	</p>
 
 	<?php try {

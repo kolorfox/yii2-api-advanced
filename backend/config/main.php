@@ -1,9 +1,6 @@
 <?php
-
-use common\transports\FTP;
-use common\transports\Mail;
-
-$params = array_merge(require __DIR__ . '/../../common/config/params.php', require __DIR__ . '/../../common/config/params-local.php', require __DIR__ . '/params.php', require __DIR__ . '/params-local.php');
+$baseUrl = str_replace('/web', '', (new \yii\web\Request())->getBaseUrl());
+$params  = array_merge(require __DIR__ . '/../../common/config/params.php', require __DIR__ . '/../../common/config/params-local.php', require __DIR__ . '/params.php', require __DIR__ . '/params-local.php');
 return [
 	'id'                  => 'app-backend',
 	'basePath'            => dirname(__DIR__),
@@ -30,6 +27,7 @@ return [
 		],
 		'request'      => [
 			'csrfParam' => '_csrf-backend',
+			'baseUrl'   => $baseUrl,
 		],
 		'user'         => [
 			'identityClass'   => 'common\models\User',
@@ -100,26 +98,6 @@ return [
 			'controllerMap' => [
 				'template' => '\backend\controllers\mailer\TemplateController',
 				'message'  => '\backend\controllers\mailer\MessageController',
-			],
-		],
-		'backup'   => [
-			'class'     => 'navatech\backup\Module',
-			'backup'    => [
-				'folder' => [
-					'enable' => false,
-					'data'   => [
-						'@api/web/uploads',
-						'@backend/web/uploads',
-					],
-				],
-			],
-			'transport' => [
-				'mail' => [
-					'class' => Mail::class,
-				],
-				'ftp'  => [
-					'class' => FTP::class,
-				],
 			],
 		],
 	],

@@ -67,6 +67,11 @@ use dmstr\widgets\Menu;
 						],
 					],
 					[
+						'label' => 'Backup manager',
+						'icon'  => 'cloud',
+						'url'   => ['/backup'],
+					],
+					[
 						'label' => 'Setting',
 						'icon'  => 'cog',
 						'url'   => ['/setting'],

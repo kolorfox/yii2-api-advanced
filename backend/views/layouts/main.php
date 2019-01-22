@@ -1,11 +1,15 @@
 <?php
 
+use backend\assets\AppAsset;
+use backend\components\View;
+use dmstr\helpers\AdminLteHelper;
+use dmstr\web\AdminLteAsset;
 use yii\helpers\Html;
 
-/* @var $this \yii\web\View */
+/* @var $this View */
 /* @var $content string */
-dmstr\web\AdminLteAsset::register($this);
-backend\assets\AppAsset::register($this);
+AdminLteAsset::register($this);
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -17,7 +21,7 @@ backend\assets\AppAsset::register($this);
 	<title><?= Html::encode($this->title) ?></title>
 	<?php $this->head() ?>
 </head>
-<body class="<?= \dmstr\helpers\AdminLteHelper::skinClass() ?>">
+<body class="<?= AdminLteHelper::skinClass() ?>">
 <?php $this->beginBody() ?>
 <div class="wrapper">
 	<?= $this->render('header') ?>

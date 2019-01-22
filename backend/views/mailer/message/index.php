@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
  * @var yii\data\ActiveDataProvider             $dataProvider
  * @var common\models\search\EmailMessageSearch $searchModel
  */
-$this->title                   = 'Lịch sử gửi email';
+$this->title                   = 'Email history';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="email-message-index">
