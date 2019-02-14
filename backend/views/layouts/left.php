@@ -45,7 +45,6 @@ use dmstr\widgets\Menu;
 						'items' => [
 							[
 								'label' => 'List users',
-								'icon'  => 'bars',
 								'url'   => ['/user/admin'],
 							],
 						],
@@ -56,12 +55,10 @@ use dmstr\widgets\Menu;
 						'items' => [
 							[
 								'label' => 'History',
-								'icon'  => 'history',
 								'url'   => ['/mailer/message'],
 							],
 							[
 								'label' => 'Template',
-								'icon'  => 'send-o',
 								'url'   => ['/mailer/template'],
 							],
 						],
@@ -69,7 +66,16 @@ use dmstr\widgets\Menu;
 					[
 						'label' => 'Backup manager',
 						'icon'  => 'cloud',
-						'url'   => ['/backup'],
+						'items' => [
+							[
+								'label' => 'Configure',
+								'url'   => ['/backup/config'],
+							],
+							[
+								'label' => 'History',
+								'url'   => ['/backup/history'],
+							],
+						],
 					],
 					[
 						'label' => 'Setting',

@@ -12,7 +12,7 @@ return [
 			'theme' => [
 				'pathMap' => [
 					'@dektrium/user/views'    => '@backend/views/user',
-					'@navatech/email/views'   => '@backend/views/mailer',
+//					'@navatech/email/views'   => '@backend/views/mailer',
 					'@navatech/setting/views' => '@backend/views/setting',
 				],
 			],

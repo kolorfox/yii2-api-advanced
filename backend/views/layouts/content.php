@@ -37,7 +37,6 @@ use yii\widgets\Breadcrumbs;
 		<?php try {
 			echo Alert::widget();
 		} catch (Exception $e) {
-
 		} ?>
 		<?= $content ?>
 	</section>

@@ -70,23 +70,11 @@ return [
 		],
 		'backup'      => [
 			'class'         => 'navatech\backup\Module',
-			'clearAfterDay' => 10,
-			'backupPath'    => '@console/runtime/backup',
-			'backup'        => [
-				'directory' => [
-					'enable' => true,
-					'data'   => [
-						'@api/web',
-					],
-				],
+			'directories'   => [
+				'@api/web',
 			],
-			'transport'     => [
-				'mail' => [
-					'class' => '\common\transports\Mail',
-				],
-				'ftp'  => [
-					'class' => '\common\transports\FTP',
-				],
+			'databases'     => [
+				'db',
 			],
 		],
 	],
